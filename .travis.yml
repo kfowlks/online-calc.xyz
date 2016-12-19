@@ -1,7 +1,5 @@
 deploy:
-      - provider: s3
-        ⋮ # rest of S3 deployment for MyApp.zip
-      - provider: codedeploy
-        #access_key_id: "YOUR AWS ACCESS KEY"
-        #secret_access_key: "YOUR AWS SECRET KEY"
-        bucket: "online-calc.xyz"
+      provider: s3
+      access_key_id: "$access_key_id"
+      secret_access_key: "$secret_access_key"
+      bucket: "online-calc.xyz"
