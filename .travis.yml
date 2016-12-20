@@ -1,6 +1,5 @@
 before_install:
-      sudo pip install awscli
-      export PATH=$PATH:$HOME/.local/bin
+      sudo pip install awscli      
 script: 
       aws s3 cp . s3://online-calc.xyz/ --recursive --exclude "*.git/*" --exclude "*.md" --exclude ".travis.yml" --include "*.js" --include "*.css" --include "*.html" --endpoint-url  "http://online-calc.xyz.s3-website-us-east-1.amazonaws.com"
 deploy:
